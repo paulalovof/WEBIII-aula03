@@ -4,11 +4,11 @@
         private $id;
         private $nome;
 
-        private 
+        private $turma;
 
         public function __construct($db) {
             $this->conexao = $db;
-
+            $this->turma = new Turma($db);
         }
         public function setNome($nome) {
             $this->nome = $nome;
@@ -18,12 +18,19 @@
             $this->id = $id;
         }
 
+        public function setTurma($turma){
+            $this->turma = $turma;
+        }
         public function getNome() {
             return $this->nome;
         }
 
         public function getId() {
             return $this->id;
+        }
+
+        public function getTurma(){
+            return $this->turma;
         }
 
         public function create() {
