@@ -9,8 +9,7 @@
     $turma->setId($_GET['id']);
 
     if($turma->delete()){
-        echo "Turma deletado com sucesso!";
-        header("Refresh:3;url=listaTurma.php");
+        header("Location:listaTurma.php");
     }else {
             echo "Erro ao deletar o turma!";
     }

@@ -12,8 +12,8 @@ $turma->setAno($_POST['ano']);
 $turma->setSigla($_POST['sigla']);
 
 if ($turma->create()) {
-    echo "Turma cadastrado com sucesso!";
-    header("Refresh:3;url=listaTurma.php");
+    
+    header("Location:listaTurma.php");
 } else {
     echo "Erro ao cadastrar o turma!";
 }

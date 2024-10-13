@@ -12,8 +12,7 @@ $turma->setAno($_POST['ano']);
 $turma->setSigla($_POST['sigla']);
 
 if ($turma->update()) {
-    echo "Turma editado com sucesso!";
-    header("Refresh:3;url=listaTurma.php");
+    header("Location:listaTurma.php");
 } else {
     echo "Erro ao editar o turma!";
 }
